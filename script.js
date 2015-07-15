@@ -30,21 +30,13 @@ function draw() {
       heroY++;
     }
     isReset = false;
-    rect(8 * heroX, 8 * heroY, 8, 8);
+    rect(8 * heroX, 8 * heroY, 16, 16);
   } else if (!keyIsPressed) isReset = true;
 }
 //Up:38
 //Left:37
 //Down:40
 //Right:39
-
-function drawHero(x, y) {
-  rect(16*(x),16*(y), 16, 16);
-  rect(16*(x + 1), 16*(y), 16, 16);
-  rect(16*(x), 16*(y + 1), 16, 16);
-  rect(16*(x + 1), 16*(y + 1), 16, 16);
-  println("test");
-}
 
 function nextFrame() {
   background(255);
