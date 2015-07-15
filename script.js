@@ -6,7 +6,7 @@ function setup() {
   createCanvas(660, 660);
   heroX = (width / 6) / 2 - 6;
   heroY = (height / 6) / 2 - 6;
-  background(255);
+  background(100);
   fill(0);
   noStroke();
   noSmooth();
@@ -32,6 +32,7 @@ function draw() {
       heroY++;
     }
     isReset = false;
+    background(100);
     rect(6 * heroX, 6 * heroY, 6, 6);
   } else if (!keyIsPressed) isReset = true;
 }
