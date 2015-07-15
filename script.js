@@ -29,6 +29,7 @@ function draw() {
     }
     isReset = false;
     nextFrame();
+    updatePixels();
   } else if (!keyIsPressed) isReset = true;
 }
 //Up:38
