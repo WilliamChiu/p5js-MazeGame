@@ -4,8 +4,8 @@ chooseSide = -1;
 
 function setup() {
   createCanvas(660, 660);
-  heroX = (width / 6) / 2 - 6;
-  heroY = (height / 6) / 2 - 6;
+  heroX = 28;
+  heroY = 28;
   background(100);
   fill(0);
   noStroke();
