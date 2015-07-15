@@ -1,6 +1,6 @@
-var isReset = true;
-var heroX = 31, heroY = 31;
-var chooseSide = -1;
+isReset = true;
+heroX = 31, heroY = 31;
+chooseSide = -1;
 
 function setup() {
   size(64, 64);
@@ -36,7 +36,7 @@ function draw() {
 //Down:40
 //Right:39
 
-function drawHero(var x, var y) {
+function drawHero(x, y) {
   set(x, y, color(0));
   set(x + 1, y, color(0));
   set(x, y + 1, color(0));
@@ -53,14 +53,14 @@ function nextFrame() {
 function drawEnemies() {
   clearEnemySpace();
   chooseSide = floor(random(4));
-  int choosePower = floor(random(2));
+  choosePower = floor(random(2));
   if (chooseSide == 0) drawLeftEnemy(choosePower);
   else if (chooseSide == 1) drawUpEnemy(choosePower);
   else if (chooseSide == 2) drawRightEnemy(choosePower);
   else if (chooseSide == 3) drawDownEnemy(choosePower);
 }
 
-function drawLeftEnemy(var x) {
+function drawLeftEnemy(x) {
   if (x == 0) {
     set(heroX - 1, heroY, color(255, 0, 0));
   }
@@ -70,7 +70,7 @@ function drawLeftEnemy(var x) {
   }
 }
 
-void drawUpEnemy(var x) {
+void drawUpEnemy(x) {
   if (x == 0) {
     set(heroX + 1, heroY - 1, color(255, 0, 0));
   }
@@ -80,7 +80,7 @@ void drawUpEnemy(var x) {
   }
 }
 
-void drawRightEnemy(var x) {
+void drawRightEnemy(x) {
   if (x == 0) {
     set(heroX + 2, heroY + 1, color(255, 0, 0));
   }
@@ -90,7 +90,7 @@ void drawRightEnemy(var x) {
   }
 }
 
-function drawDownEnemy(var x) {
+function drawDownEnemy(x) {
   if (x == 0) {
     set(heroX, heroY + 2, color(255, 0, 0));
   }
@@ -112,8 +112,8 @@ function clearEnemySpace() {
 }
 
 function drawDistraction() {
-  for (var tempX = 0; tempX < width; tempX++) {
-    for (var tempY = 0; tempY < height; tempY++) {
+  for (tempX = 0; tempX < width; tempX++) {
+    for (tempY = 0; tempY < height; tempY++) {
       if (floor(random(3)) == 0) set(tempX, tempY, color(255, 0, 0));
     }
   }
