@@ -5,7 +5,7 @@ chooseSide = -1;
 function setup() {
   createCanvas(512, 512);
   background(255);
-  fill(color(0));
+  fill(0);
   noStroke();
   noSmooth();
 }
