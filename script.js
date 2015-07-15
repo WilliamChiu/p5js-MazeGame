@@ -9,7 +9,7 @@ function setup() {
 }
 
 function draw() {
-  if (keyPressed && isReset) {
+  if (keyIsPressed && isReset) {
     println(heroX);
     if (keyCode == 37) {
       if (chooseSide == 0) exit();
@@ -29,7 +29,7 @@ function draw() {
     }
     isReset = false;
     nextFrame();
-  } else if (!keyPressed) isReset = true;
+  } else if (!keyIsPressed) isReset = true;
 }
 //Up:38
 //Left:37
