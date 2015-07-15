@@ -46,8 +46,8 @@ function drawHero(x, y) {
 function nextFrame() {
   background(255);
   drawHero(heroX, heroY);
-  drawDistraction();
-  drawEnemies();
+  //drawDistraction();
+  //drawEnemies();
 }
 
 function drawEnemies() {
