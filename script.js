@@ -1,5 +1,5 @@
 isReset = true;
-heroX, heroY;
+heroX = 0, heroY = 0;
 chooseSide = -1;
 
 function setup() {
