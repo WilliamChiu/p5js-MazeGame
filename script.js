@@ -30,7 +30,7 @@ function draw() {
       heroY++;
     }
     isReset = false;
-    rect(16 * heroX, 16 * heroY, 32, 32);
+    rect(8 * heroX, 8 * heroY, 8, 8);
   } else if (!keyIsPressed) isReset = true;
 }
 //Up:38
