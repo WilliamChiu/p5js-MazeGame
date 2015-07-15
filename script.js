@@ -70,7 +70,7 @@ function drawLeftEnemy(x) {
   }
 }
 
-void drawUpEnemy(x) {
+function drawUpEnemy(x) {
   if (x == 0) {
     set(heroX + 1, heroY - 1, color(255, 0, 0));
   }
@@ -80,7 +80,7 @@ void drawUpEnemy(x) {
   }
 }
 
-void drawRightEnemy(x) {
+function drawRightEnemy(x) {
   if (x == 0) {
     set(heroX + 2, heroY + 1, color(255, 0, 0));
   }
