@@ -36,7 +36,7 @@ function draw() {
 //Down:40
 //Right:39
 
-function drawHero(int x, int y) {
+function drawHero(var x, var y) {
   set(x, y, color(0));
   set(x + 1, y, color(0));
   set(x, y + 1, color(0));
@@ -60,7 +60,7 @@ function drawEnemies() {
   else if (chooseSide == 3) drawDownEnemy(choosePower);
 }
 
-function drawLeftEnemy(int x) {
+function drawLeftEnemy(var x) {
   if (x == 0) {
     set(heroX - 1, heroY, color(255, 0, 0));
   }
@@ -70,7 +70,7 @@ function drawLeftEnemy(int x) {
   }
 }
 
-void drawUpEnemy(int x) {
+void drawUpEnemy(var x) {
   if (x == 0) {
     set(heroX + 1, heroY - 1, color(255, 0, 0));
   }
@@ -80,7 +80,7 @@ void drawUpEnemy(int x) {
   }
 }
 
-void drawRightEnemy(int x) {
+void drawRightEnemy(var x) {
   if (x == 0) {
     set(heroX + 2, heroY + 1, color(255, 0, 0));
   }
@@ -90,7 +90,7 @@ void drawRightEnemy(int x) {
   }
 }
 
-function drawDownEnemy(int x) {
+function drawDownEnemy(var x) {
   if (x == 0) {
     set(heroX, heroY + 2, color(255, 0, 0));
   }
