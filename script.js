@@ -3,7 +3,7 @@ heroX = 31, heroY = 31;
 chooseSide = -1;
 
 function setup() {
-  createCanvas(64, 64);
+  createCanvas(512, 512);
   background(255);
   noSmooth();
 }
@@ -29,7 +29,6 @@ function draw() {
     }
     isReset = false;
     nextFrame();
-    updatePixels();
   } else if (!keyIsPressed) isReset = true;
 }
 //Up:38
@@ -38,10 +37,10 @@ function draw() {
 //Right:39
 
 function drawHero(x, y) {
-  set(x, y, color(0));
-  set(x + 1, y, color(0));
-  set(x, y + 1, color(0));
-  set(x + 1, y + 1, color(0));
+  rect(16*(x),16*(y), 16, 16);
+  rect(16*(x + 1), 16*(y), 16, 16);
+  rect(16*(x), 16*(y + 1), 16, 16);
+  rect(16*(x + 1), 16*(y + 1), 16, 16);
 }
 
 function nextFrame() {
@@ -63,59 +62,59 @@ function drawEnemies() {
 
 function drawLeftEnemy(x) {
   if (x == 0) {
-    set(heroX - 1, heroY, color(255, 0, 0));
+    rect(heroX - 1, heroY, 4, 4);
   }
   else {
-    set(heroX - 1, heroY, color(255, 0, 0));
-    set(heroX - 1, heroY + 1, color(255, 0, 0));
+    rect(heroX - 1, heroY, 4, 4);
+    rect(heroX - 1, heroY + 1, 4, 4);
   }
 }
 
 function drawUpEnemy(x) {
   if (x == 0) {
-    set(heroX + 1, heroY - 1, color(255, 0, 0));
+    rect(heroX + 1, heroY - 1, 4, 4);
   }
   else {
-    set(heroX + 1, heroY - 1, color(255, 0, 0));
-    set(heroX, heroY - 1, color(255, 0, 0));
+    rect(heroX + 1, heroY - 1, 4, 4);
+    rect(heroX, heroY - 1, 4, 4);
   }
 }
 
 function drawRightEnemy(x) {
   if (x == 0) {
-    set(heroX + 2, heroY + 1, color(255, 0, 0));
+    rect(heroX + 2, heroY + 1, 4, 4);
   }
   else {
-    set(heroX + 2, heroY + 1, color(255, 0, 0));
-    set(heroX + 2, heroY, color(255, 0, 0));
+    rect(heroX + 2, heroY + 1, 4, 4);
+    rect(heroX + 2, heroY, 4, 4);
   }
 }
 
 function drawDownEnemy(x) {
   if (x == 0) {
-    set(heroX, heroY + 2, color(255, 0, 0));
+    rect(heroX, heroY + 2, 4, 4);
   }
   else {
-    set(heroX, heroY + 2, color(255, 0, 0));
-    set(heroX + 1, heroY + 2, color(255, 0, 0));
+    rect(heroX, heroY + 2, 4, 4);
+    rect(heroX + 1, heroY + 2, 4, 4);
   }
 }
 
 function clearEnemySpace() {
-  set(heroX - 1, heroY, color(255));
-  set(heroX - 1, heroY + 1, color(255));
-  set(heroX, heroY - 1, color(255));
-  set(heroX + 1, heroY - 1, color(255));
-  set(heroX + 2, heroY, color(255));
-  set(heroX + 2, heroY + 1, color(255));
-  set(heroX, heroY + 2, color(255));
-  set(heroX + 1, heroY + 2, color(255));
+  rect(heroX - 1, heroY, 4, 4);
+  rect(heroX - 1, heroY + 1, 4, 4);
+  rect(heroX, heroY - 1, 4, 4);
+  rect(heroX + 1, heroY - 1, 4, 4);
+  rect(heroX + 2, heroY, 4, 4);
+  rect(heroX + 2, heroY + 1, 4, 4);
+  rect(heroX, heroY + 2, 4, 4);
+  rect(heroX + 1, heroY + 2, 4, 4);
 }
 
 function drawDistraction() {
   for (tempX = 0; tempX < width; tempX++) {
     for (tempY = 0; tempY < height; tempY++) {
-      if (floor(random(3)) == 0) set(tempX, tempY, color(255, 0, 0));
+      if (floor(random(3)) == 0) rect(tempX, tempY, 4, 4);
     }
   }
 }
