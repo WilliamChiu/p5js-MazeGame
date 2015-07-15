@@ -1,9 +1,11 @@
 isReset = true;
-heroX = 31, heroY = 31;
+heroX, heroY;
 chooseSide = -1;
 
 function setup() {
-  createCanvas(512, 512);
+  createCanvas(660, 660);
+  heroX = width / 2 - 6;
+  heroY = height / 2 - 6;
   background(255);
   fill(0);
   noStroke();
@@ -30,7 +32,7 @@ function draw() {
       heroY++;
     }
     isReset = false;
-    rect(8 * heroX, 8 * heroY, 16, 16);
+    rect(6 * heroX, 6 * heroY, 12, 12);
   } else if (!keyIsPressed) isReset = true;
 }
 //Up:38
