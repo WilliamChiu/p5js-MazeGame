@@ -3,7 +3,7 @@ heroX = 31, heroY = 31;
 chooseSide = -1;
 
 function setup() {
-  size(64, 64);
+  createCanvas(64, 64);
   background(255);
   noSmooth();
 }
