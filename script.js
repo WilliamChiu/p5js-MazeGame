@@ -112,8 +112,8 @@ function clearEnemySpace() {
 }
 
 function drawDistraction() {
-  for (int tempX = 0; tempX < width; tempX++) {
-    for (int tempY = 0; tempY < height; tempY++) {
+  for (var tempX = 0; tempX < width; tempX++) {
+    for (var tempY = 0; tempY < height; tempY++) {
       if (floor(random(3)) == 0) set(tempX, tempY, color(255, 0, 0));
     }
   }
