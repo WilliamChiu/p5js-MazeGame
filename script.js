@@ -43,6 +43,7 @@ function drawHero(x, y) {
   rect(16*(x + 1), 16*(y), 16, 16);
   rect(16*(x), 16*(y + 1), 16, 16);
   rect(16*(x + 1), 16*(y + 1), 16, 16);
+  println("test");
 }
 
 function nextFrame() {
