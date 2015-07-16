@@ -73,10 +73,12 @@ function nextFrame() {
 function drawEnemies() {
   clearEnemySpace();
   chooseSide = floor(random(4));
+  fill(200);
   if (chooseSide == 0) drawLeftEnemy();
   else if (chooseSide == 1) drawUpEnemy();
   else if (chooseSide == 2) drawRightEnemy();
   else if (chooseSide == 3) drawDownEnemy();
+  fill(255);
 }
 
 function drawLeftEnemy() {
