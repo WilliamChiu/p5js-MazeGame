@@ -15,11 +15,11 @@ function setup() {
   heroY = 27;
   if (floor(random(2)) == 0) {
     backgroundColor = color(255, 0, 0);
-    frameRate(0.5);
+    frameRate(1);
   }
   else {
     backgroundColor = color(0, 0, 255);
-    frameRate(1);
+    frameRate(0.9);
   }
   background(backgroundColor);
   noStroke();
@@ -111,6 +111,12 @@ function reset() {
 }
 
 function choosebgColor() {
-  if (backgroundColor == "rgba(255,0,0,1)") backgroundColor = color(0, 0, 255);
-  else backgroundColor = color(255, 0, 0);
+  if (backgroundColor == "rgba(255,0,0,1)") {
+    backgroundColor = color(0, 0, 255);
+    frameRate(0.9);
+  }
+  else {
+    backgroundColor = color(255, 0, 0);
+    frameRate(1);
+  }
 }
