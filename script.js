@@ -3,7 +3,7 @@ var heroX = 0, heroY = 0;
 var chooseSide = -1;
 var counter;
 var realcounter;
-var resetcounter;
+var resetcounter = 0;
 var backgroundColor;
 
 function setup() {
@@ -11,7 +11,8 @@ function setup() {
   createCanvas(660, 660);
   heroX = 27;
   heroY = 27;
-  choosebgColor();
+  if (floor(random(2)) == 0) backgroundColor = color(255, 0, 0);
+  else backgroundColor = color(0, 0, 255);
   background(backgroundColor);
   noStroke();
   noSmooth();
@@ -48,7 +49,7 @@ function draw() {
       if (chooseSide == 3) reset();
       else heroY++;
     }
-    //else if (key == "a") heroX = 0; //cheat
+    else if (key == "a") heroX = 0; //cheat
   }
   nextFrame();
 }
@@ -101,6 +102,6 @@ function reset() {
 }
 
 function choosebgColor() {
-  if (floor(random(2)) == 0) backgroundColor = color(255, 0, 0);
-  else backgroundColor = color(0, 0, 255);
+  if (backgroundColor == color(255, 0, 0, 1)) backgroundColor == color(0, 0, 255, 1);
+  else backgroundColor == color(255, 0, 0, 1);
 }
