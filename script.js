@@ -10,6 +10,7 @@ function setup() {
   counter = createP();
   var cnv = createCanvas(660, 660);
   cnv.parent("gameContainer");
+  counter.parent("gameContainer");
   heroX = 27;
   heroY = 27;
   if (floor(random(2)) == 0) backgroundColor = color(255, 0, 0);
