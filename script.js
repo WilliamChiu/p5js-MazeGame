@@ -32,6 +32,7 @@ function draw() {
     createP(realcounter + "s with the color " + backgroundColor.toString().replace("rgba(255,0,0,1)", "red").replace("rgba(0,0,255,1)", "blue") /*I'm lazy*/ + " and " + resetcounter + " resets.");
     reset();
     resetcounter = 0;
+    realcounter = 0;
     choosebgColor();
   }
   if (keyIsPressed) {
