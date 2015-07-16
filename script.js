@@ -22,7 +22,7 @@ function setup() {
   heroY = 27;
   if (floor(random(2)) == 0) {
     backgroundColor = color(255, 0, 0);
-    frameRate(0.9);
+    frameRate(1);
   }
   else {
     backgroundColor = color(0, 0, 255);
@@ -137,6 +137,6 @@ function choosebgColor() {
   }
   else {
     backgroundColor = color(255, 0, 0);
-    frameRate(0.9);
+    frameRate(1);
   }
 }
