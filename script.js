@@ -1,4 +1,5 @@
-var heroX = 0, heroY = 0;
+var heroX = 0;
+var heroY = 0;
 var chooseSide = -1;
 var counter;
 
