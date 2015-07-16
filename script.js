@@ -2,6 +2,7 @@ var isReset = true;
 var heroX = 0, heroY = 0;
 var chooseSide = -1;
 var counter;
+var realcounter;
 
 function setup() {
   counter = createP();
@@ -13,11 +14,13 @@ function setup() {
   noStroke();
   noSmooth();
   frameRate(1);
+  realcounter = 0;
   rect(12 * heroX, 12 * heroY, 12, 12);
 }
 
 function draw() {
-  counter.html(frameCount);
+  counter.html(realcounter);
+  realcounter++;
   if (keyIsPressed) {
     println(heroX);
     if (keyCode == 37) {
@@ -84,5 +87,5 @@ function clearEnemySpace() {
 function reset() {
   heroX = 27;
   heroY = 27;
-  frameCount = 0;
+  realcounter = 0;
 }
