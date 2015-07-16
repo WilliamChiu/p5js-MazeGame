@@ -47,8 +47,8 @@ function draw() {
       else heroY++;
     }
     else if (key == "a") heroX = 0;
-    nextFrame();
   }
+  nextFrame();
 }
 
 function nextFrame() {
