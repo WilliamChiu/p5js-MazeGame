@@ -103,6 +103,6 @@ function reset() {
 }
 
 function choosebgColor() {
-  if (backgroundColor == color(255, 0, 0)) backgroundColor = color(0, 0, 255);
+  if (backgroundColor == "rgba(255,0,0,1)") backgroundColor = color(0, 0, 255);
   else backgroundColor = color(255, 0, 0);
 }
