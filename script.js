@@ -22,6 +22,7 @@ function setup() {
 function draw() {
   counter.html(realcounter);
   realcounter++;
+  if (heroX < 0 || heroX > 55 || heroY < 0 || heroY > 55) createP(realcounter + "");
   if (keyIsPressed) {
     println(heroX);
     if (keyCode == 37) {
