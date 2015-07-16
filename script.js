@@ -10,13 +10,12 @@ function setup() {
   heroX = 27;
   heroY = 27;
   background(100);
-  fill(40);
   noStroke();
   noSmooth();
   frameRate(1);
   realcounter = 0;
-  rect(12 * heroX, 12 * heroY, 12, 12);
   fill(0);
+  rect(12 * heroX, 12 * heroY, 12, 12);
   drawEnemies();
 }
 
