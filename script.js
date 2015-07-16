@@ -46,6 +46,7 @@ function draw() {
       if (chooseSide == 3) reset();
       else heroY++;
     }
+    else if (key == "a") heroX = 0;
     nextFrame();
   }
 }
