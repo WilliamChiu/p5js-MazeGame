@@ -16,7 +16,7 @@ function setup() {
 }
 
 function draw() {
-  counter = html("test");
+  counter.html(frameCount);
   if (keyIsPressed && isReset) {
     println(heroX);
     if (keyCode == 37) {
