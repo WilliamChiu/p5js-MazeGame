@@ -58,15 +58,15 @@ function drawLeftEnemy() {
 }
 
 function drawUpEnemy() {
-  rect(12 * (heroX + 1), 12 * (heroY - 1), 12, 12);
+  rect(12 * (heroX), 12 * (heroY - 1), 12, 12);
 }
 
 function drawRightEnemy() {
-  rect(12 * (heroX + 2), 12 * (heroY + 1), 12, 12);
+  rect(12 * (heroX + 1), 12 * (heroY), 12, 12);
 }
 
 function drawDownEnemy() {
-  rect(12 * (heroX), 12 * (heroY + 2), 12, 12);
+  rect(12 * (heroX), 12 * (heroY + 1), 12, 12);
 }
 
 function clearEnemySpace() {
