@@ -21,19 +21,19 @@ function draw() {
   if (keyIsPressed) {
     println(heroX);
     if (keyCode == 37) {
-      if (chooseSide == 0) exit();
+      if (chooseSide == 0) reset();
       heroX--;
     }
     else if (keyCode == 38) {
-      if (chooseSide == 1) exit();
+      if (chooseSide == 1) reset();
       heroY--;
     }
     else if (keyCode == 39) {
-      if (chooseSide == 2) exit();
+      if (chooseSide == 2) reset();
       heroX++;
     }
     else if (keyCode == 40) {
-      if (chooseSide == 3) exit();
+      if (chooseSide == 3) reset();
       heroY++;
     }
     nextFrame();
@@ -79,4 +79,11 @@ function clearEnemySpace() {
   rect(12 * (heroX + 1), 12 * (heroY), 12, 12);
   rect(12 * (heroX), 12 * (heroY + 1), 12, 12);
   fill(0);
+}
+
+function reset() {
+  heroX = 27;
+  heroY = 27;
+  frameCount = 0;
+}
 }
