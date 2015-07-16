@@ -1,4 +1,3 @@
-var isReset = true;
 var heroX = 0, heroY = 0;
 var chooseSide = -1;
 var counter;
@@ -18,7 +17,7 @@ function setup() {
 
 function draw() {
   counter.html(frameCount);
-  if (keyIsPressed && isReset) {
+  if (keyIsPressed) {
     println(heroX);
     if (keyCode == 37) {
       if (chooseSide == 0) exit();
@@ -36,9 +35,7 @@ function draw() {
       if (chooseSide == 3) exit();
       heroY++;
     }
-    isReset = false;
     nextFrame();
-  } else if (!keyIsPressed) isReset = true;
 }
 
 function nextFrame() {
