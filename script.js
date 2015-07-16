@@ -47,47 +47,26 @@ function nextFrame() {
 function drawEnemies() {
   clearEnemySpace();
   chooseSide = floor(random(4));
-  choosePower = floor(random(2));
-  if (chooseSide == 0) drawLeftEnemy(choosePower);
-  else if (chooseSide == 1) drawUpEnemy(choosePower);
-  else if (chooseSide == 2) drawRightEnemy(choosePower);
-  else if (chooseSide == 3) drawDownEnemy(choosePower);
+  if (chooseSide == 0) drawLeftEnemy();
+  else if (chooseSide == 1) drawUpEnemy();
+  else if (chooseSide == 2) drawRightEnemy();
+  else if (chooseSide == 3) drawDownEnemy();
 }
 
-function drawLeftEnemy(x) {
-  if (x == 0) {
-    rect(12 * (heroX - 1), 12 * (heroY), 12, 12);
-  }
-  else {
-    rect(12 * (heroX - 1), 12 * (heroY), 12, 24);
-  }
+function drawLeftEnemy() {
+  rect(12 * (heroX - 1), 12 * (heroY), 12, 12);
 }
 
-function drawUpEnemy(x) {
-  if (x == 0) {
-    rect(12 * (heroX + 1), 12 * (heroY - 1), 12, 12);
-  }
-  else {
-    rect(12 * (heroX), 12 * (heroY - 1), 24, 12);
-  }
+function drawUpEnemy() {
+  rect(12 * (heroX + 1), 12 * (heroY - 1), 12, 12);
 }
 
-function drawRightEnemy(x) {
-  if (x == 0) {
-    rect(12 * (heroX + 2), 12 * (heroY + 1), 12, 12);
-  }
-  else {
-    rect(12 * (heroX + 2), 12 * (heroY), 24, 12);
-  }
+function drawRightEnemy() {
+  rect(12 * (heroX + 2), 12 * (heroY + 1), 12, 12);
 }
 
-function drawDownEnemy(x) {
-  if (x == 0) {
-    rect(12 * (heroX), 12 * (heroY + 2), 12, 12);
-  }
-  else {
-    rect(12 * (heroX), 12 * (heroY + 2), 24, 12);
-  }
+function drawDownEnemy() {
+  rect(12 * (heroX), 12 * (heroY + 2), 12, 12);
 }
 
 function clearEnemySpace() {
