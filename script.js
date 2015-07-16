@@ -10,12 +10,14 @@ function setup() {
   heroX = 27;
   heroY = 27;
   background(100);
-  fill(0);
+  fill(40);
   noStroke();
   noSmooth();
   frameRate(1);
   realcounter = 0;
   rect(12 * heroX, 12 * heroY, 12, 12);
+  fill(0);
+  drawEnemy();
 }
 
 function draw() {
@@ -25,19 +27,19 @@ function draw() {
     println(heroX);
     if (keyCode == 37) {
       if (chooseSide == 0) reset();
-      heroX--;
+      else heroX--;
     }
     else if (keyCode == 38) {
       if (chooseSide == 1) reset();
-      heroY--;
+      else heroY--;
     }
     else if (keyCode == 39) {
       if (chooseSide == 2) reset();
-      heroX++;
+      else heroX++;
     }
     else if (keyCode == 40) {
       if (chooseSide == 3) reset();
-      heroY++;
+      else heroY++;
     }
     nextFrame();
   }
@@ -46,7 +48,6 @@ function draw() {
 function nextFrame() {
   background(100);
   rect(12 * heroX, 12 * heroY, 12, 12);
-  //drawDistraction();
   drawEnemies();
 }
 
