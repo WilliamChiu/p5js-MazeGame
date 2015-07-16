@@ -58,22 +58,33 @@ function nextFrame() {
   background(backgroundColor);
   if (keyCode == 37) {
       if (chooseSide == 0) reset();
-      else heroX--;
+      else {
+          heroX--;
+          drawEnemies();
+      }
     }
     else if (keyCode == 38) {
       if (chooseSide == 1) reset();
-      else heroY--;
+      else {
+          heroY--;
+          drawEnemies();
+      }
     }
     else if (keyCode == 39) {
       if (chooseSide == 2) reset();
-      else heroX++;
+      else {
+          heroX++;
+          drawEnemies();
+      }
     }
     else if (keyCode == 40) {
       if (chooseSide == 3) reset();
-      else heroY++;
+      else {
+          heroY++;
+          drawEnemies();
+      }
   }
   rect(12 * heroX, 12 * heroY, 12, 12);
-  drawEnemies();
   keyCode = 0;
 }
 
