@@ -33,14 +33,13 @@ function draw() {
       heroY++;
     }
     isReset = false;
-    background(100);
-    rect(12 * heroX, 12 * heroY, 12, 12);
+    nextFrame();
   } else if (!keyIsPressed) isReset = true;
 }
 
 function nextFrame() {
-  background(255);
-  drawHero(heroX, heroY);
+  background(100);
+  rect(12 * heroX, 12 * heroY, 12, 12);
   //drawDistraction();
   drawEnemies();
 }
