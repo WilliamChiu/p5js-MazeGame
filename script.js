@@ -27,7 +27,7 @@ function draw() {
   counter.html(realcounter);
   realcounter += 0.5;
   if (heroX < 0 || heroX > 55 || heroY < 0 || heroY > 55) {
-    createP(realcounter + "s with the color " + backgroundColor.replace("rgba(255,0,0,1)", "red").replace("rgba(0,0,255,1)", "blue") /*I'm lazy*/ + " and " + resetcounter + " resets.");
+    createP(realcounter + "s with the color " + backgroundColor.toString().replace("rgba(255,0,0,1)", "red").replace("rgba(0,0,255,1)", "blue") /*I'm lazy*/ + " and " + resetcounter + " resets.");
     reset();
     resetcounter = 0;
     choosebgColor();
