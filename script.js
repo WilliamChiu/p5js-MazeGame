@@ -99,5 +99,5 @@ function reset() {
 
 function choosebgColor() {
   if (floor(random(2)) == 0) backgroundColor = color(255, 0, 0);
-  else backgroundColor = (0, 0, 255);
+  else backgroundColor = color(0, 0, 255);
 }
