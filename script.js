@@ -33,7 +33,7 @@ function draw() {
     }
     isReset = false;
     background(100);
-    rect(6 * heroX, 6 * heroY, 6, 6);
+    rect(12 * heroX, 12 * heroY, 12, 12);
   } else if (!keyIsPressed) isReset = true;
 }
 //Up:38
