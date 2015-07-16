@@ -26,7 +26,7 @@ function draw() {
   counter.html(realcounter);
   realcounter++;
   if (heroX < 0 || heroX > 55 || heroY < 0 || heroY > 55) {
-    createP(realcounter + "s with the color" + backgroundColor + " and " + resetcounter " resets.");
+    createP(realcounter + "s with the color" + backgroundColor + " and " + resetcounter + " resets.");
     reset();
     resetcounter = 0;
   }
