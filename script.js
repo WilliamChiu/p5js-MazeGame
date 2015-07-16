@@ -17,7 +17,7 @@ function setup() {
   realcounter = 0;
   rect(12 * heroX, 12 * heroY, 12, 12);
   fill(0);
-  drawEnemy();
+  drawEnemies();
 }
 
 function draw() {
