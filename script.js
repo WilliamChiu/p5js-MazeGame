@@ -83,9 +83,9 @@ function nextFrame() {
           heroY++;
           chooseSide = floor(random(4));
       }
-      drawEnemies();
   }
   rect(12 * heroX, 12 * heroY, 12, 12);
+  drawEnemies();
   keyCode = 0;
 }
 
