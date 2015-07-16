@@ -1,6 +1,6 @@
 var isReset = true;
 var heroX = 0, heroY = 0;
-var chooseSide = -1;
+var chooseSide = 0;
 var counter;
 var realcounter;
 var resetcounter = 0;
@@ -60,29 +60,30 @@ function nextFrame() {
       if (chooseSide == 0) reset();
       else {
           heroX--;
-          drawEnemies();
+          chooseSide = floor(random(4));
       }
     }
     else if (keyCode == 38) {
       if (chooseSide == 1) reset();
       else {
           heroY--;
-          drawEnemies();
+          chooseSide = floor(random(4));
       }
     }
     else if (keyCode == 39) {
       if (chooseSide == 2) reset();
       else {
           heroX++;
-          drawEnemies();
+          chooseSide = floor(random(4));
       }
     }
     else if (keyCode == 40) {
       if (chooseSide == 3) reset();
       else {
           heroY++;
-          drawEnemies();
+          chooseSide = floor(random(4));
       }
+      drawEnemies();
   }
   rect(12 * heroX, 12 * heroY, 12, 12);
   keyCode = 0;
@@ -90,7 +91,6 @@ function nextFrame() {
 
 function drawEnemies() {
   clearEnemySpace();
-  chooseSide = floor(random(4));
   fill(200);
   if (chooseSide == 0) drawLeftEnemy();
   else if (chooseSide == 1) drawUpEnemy();
