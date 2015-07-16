@@ -29,7 +29,8 @@ function draw() {
   counter.html(realcounter);
   realcounter += 1;
   if (heroX < 0 || heroX > 55 || heroY < 0 || heroY > 55) {
-    createP(realcounter + "s with the color " + backgroundColor.toString().replace("rgba(255,0,0,1)", "red").replace("rgba(0,0,255,1)", "blue") /*I'm lazy*/ + " and " + resetcounter + " resets.");
+    log = createP(realcounter + "s with the color " + backgroundColor.toString().replace("rgba(255,0,0,1)", "red").replace("rgba(0,0,255,1)", "blue") /*I'm lazy*/ + " and " + resetcounter + " resets.");
+    log.parent("gameContainer");
     reset();
     resetcounter = 0;
     realcounter = 0;
