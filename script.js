@@ -61,7 +61,7 @@ function nextFrame() {
   rect(12 * heroX, 12 * heroY, 12, 12);
   drawEnemies();
   buttonPressed = false;
-    if (keyCode == 37) {
+  if (keyCode == 37) {
       if (chooseSide == 0) reset();
       else heroX--;
     }
@@ -76,7 +76,8 @@ function nextFrame() {
     else if (keyCode == 40) {
       if (chooseSide == 3) reset();
       else heroY++;
-    }
+  }
+  keyCode = 0;
 }
 
 function drawEnemies() {
