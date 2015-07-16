@@ -86,4 +86,3 @@ function reset() {
   heroY = 27;
   frameCount = 0;
 }
-}
