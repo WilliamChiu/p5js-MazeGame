@@ -4,8 +4,8 @@ chooseSide = -1;
 
 function setup() {
   createCanvas(660, 660);
-  heroX = 28;
-  heroY = 28;
+  heroX = 27;
+  heroY = 27;
   background(100);
   fill(0);
   noStroke();
@@ -37,10 +37,6 @@ function draw() {
     rect(12 * heroX, 12 * heroY, 12, 12);
   } else if (!keyIsPressed) isReset = true;
 }
-//Up:38
-//Left:37
-//Down:40
-//Right:39
 
 function nextFrame() {
   background(255);
