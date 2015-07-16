@@ -1,7 +1,7 @@
-isReset = true;
-heroX = 0, heroY = 0;
-chooseSide = -1;
-counter;
+var isReset = true;
+var heroX = 0, heroY = 0;
+var chooseSide = -1;
+var counter;
 
 function setup() {
   counter = createP();
@@ -79,12 +79,4 @@ function clearEnemySpace() {
   rect(12 * (heroX + 1), 12 * (heroY), 12, 12);
   rect(12 * (heroX), 12 * (heroY + 1), 12, 12);
   fill(0);
-}
-
-function drawDistraction() {
-  for (tempX = 0; tempX < width; tempX++) {
-    for (tempY = 0; tempY < height; tempY++) {
-      if (floor(random(3)) == 0) rect(tempX, tempY, 4, 4);
-    }
-  }
 }
