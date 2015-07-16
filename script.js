@@ -26,8 +26,7 @@ function draw() {
   realcounter++;
   if (heroX < 0 || heroX > 55 || heroY < 0 || heroY > 55) {
     createP(realcounter + "");
-    heroX = 27;
-    heroY = 27;
+    reset();
   }
   if (keyIsPressed) {
     println(heroX);
