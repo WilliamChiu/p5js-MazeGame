@@ -6,6 +6,7 @@ var realcounter;
 var resetcounter = 0;
 var backgroundColor;
 var buttonPressed = false;
+var thebutton;
 
 window.addEventListener("keydown", function(e) {
     // space and arrow keys
@@ -53,8 +54,13 @@ function draw() {
 }
 
 function keyPressed() {
-  if (!buttonPressed) {
-    println(heroX);
+}
+
+function nextFrame() {
+  background(backgroundColor);
+  rect(12 * heroX, 12 * heroY, 12, 12);
+  drawEnemies();
+  buttonPressed = false;
     if (keyCode == 37) {
       if (chooseSide == 0) reset();
       else heroX--;
@@ -71,16 +77,6 @@ function keyPressed() {
       if (chooseSide == 3) reset();
       else heroY++;
     }
-    else if (key == "a") heroX = 0; //cheat
-    buttonPressed = true;
-  }
-}
-
-function nextFrame() {
-  background(backgroundColor);
-  rect(12 * heroX, 12 * heroY, 12, 12);
-  drawEnemies();
-  buttonPressed = false;
 }
 
 function drawEnemies() {
