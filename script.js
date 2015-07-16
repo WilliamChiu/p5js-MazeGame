@@ -56,8 +56,6 @@ function keyPressed() {
 
 function nextFrame() {
   background(backgroundColor);
-  rect(12 * heroX, 12 * heroY, 12, 12);
-  drawEnemies();
   if (keyCode == 37) {
       if (chooseSide == 0) reset();
       else heroX--;
@@ -74,6 +72,8 @@ function nextFrame() {
       if (chooseSide == 3) reset();
       else heroY++;
   }
+  rect(12 * heroX, 12 * heroY, 12, 12);
+  drawEnemies();
   keyCode = 0;
 }
 
