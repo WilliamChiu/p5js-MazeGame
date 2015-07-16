@@ -3,6 +3,7 @@ var heroX = 0, heroY = 0;
 var chooseSide = -1;
 var counter;
 var realcounter;
+var resetcounter;
 var backgroundColor;
 
 function setup() {
@@ -25,8 +26,9 @@ function draw() {
   counter.html(realcounter);
   realcounter++;
   if (heroX < 0 || heroX > 55 || heroY < 0 || heroY > 55) {
-    createP(realcounter + "");
+    createP(realcounter + "s with the color" + backgroundColor + " and " + resetcounter " resets.");
     reset();
+    resetcounter = 0;
   }
   if (keyIsPressed) {
     println(heroX);
@@ -46,7 +48,7 @@ function draw() {
       if (chooseSide == 3) reset();
       else heroY++;
     }
-    else if (key == "a") heroX = 0;
+    //else if (key == "a") heroX = 0; //cheat
   }
   nextFrame();
 }
@@ -95,6 +97,7 @@ function reset() {
   heroX = 27;
   heroY = 27;
   realcounter = 0;
+  resetcounter++;
 }
 
 function choosebgColor() {
