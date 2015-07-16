@@ -30,7 +30,7 @@ function draw() {
     createP(realcounter + "s with the color" + backgroundColor + " and " + resetcounter + " resets.");
     reset();
     resetcounter = 0;
-    choosebgColor() {
+    choosebgColor();
   }
   if (keyIsPressed) {
     println(heroX);
