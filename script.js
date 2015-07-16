@@ -18,7 +18,7 @@ function setup() {
   background(backgroundColor);
   noStroke();
   noSmooth();
-  frameRate(2);
+  frameRate(1);
   realcounter = 0;
   fill(255);
   rect(12 * heroX, 12 * heroY, 12, 12);
@@ -27,7 +27,7 @@ function setup() {
 
 function draw() {
   counter.html(realcounter);
-  realcounter += 0.5;
+  realcounter += 1;
   if (heroX < 0 || heroX > 55 || heroY < 0 || heroY > 55) {
     createP(realcounter + "s with the color " + backgroundColor.toString().replace("rgba(255,0,0,1)", "red").replace("rgba(0,0,255,1)", "blue") /*I'm lazy*/ + " and " + resetcounter + " resets.");
     reset();
@@ -100,7 +100,6 @@ function clearEnemySpace() {
 function reset() {
   heroX = 27;
   heroY = 27;
-  realcounter = 0;
   resetcounter++;
 }
 
