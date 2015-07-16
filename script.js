@@ -70,10 +70,12 @@ function drawDownEnemy() {
 }
 
 function clearEnemySpace() {
-  rect(12 * (heroX - 1), 12 * (heroY), 12, 24);
-  rect(12 * (heroX), 12 * (heroY - 1), 24, 12);
-  rect(12 * (heroX + 2), 12 * (heroY), 12, 24);
-  rect(12 * (heroX), 12 * (heroY + 2), 24, 12);
+  fill(100);
+  rect(12 * (heroX - 1), 12 * (heroY), 12, 12);
+  rect(12 * (heroX), 12 * (heroY - 1), 12, 12);
+  rect(12 * (heroX + 1), 12 * (heroY), 12, 12);
+  rect(12 * (heroX), 12 * (heroY + 1), 12, 12);
+  fill(0);
 }
 
 function drawDistraction() {
