@@ -5,8 +5,6 @@ var counter;
 var realcounter;
 var resetcounter = 0;
 var backgroundColor;
-var buttonPressed = false;
-var thebutton;
 
 window.addEventListener("keydown", function(e) {
     // space and arrow keys
@@ -60,7 +58,6 @@ function nextFrame() {
   background(backgroundColor);
   rect(12 * heroX, 12 * heroY, 12, 12);
   drawEnemies();
-  buttonPressed = false;
   if (keyCode == 37) {
       if (chooseSide == 0) reset();
       else heroX--;
