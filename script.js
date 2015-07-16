@@ -16,7 +16,7 @@ function setup() {
   background(backgroundColor);
   noStroke();
   noSmooth();
-  frameRate(1);
+  frameRate(2);
   realcounter = 0;
   fill(0);
   rect(12 * heroX, 12 * heroY, 12, 12);
@@ -25,9 +25,9 @@ function setup() {
 
 function draw() {
   counter.html(realcounter);
-  realcounter++;
+  realcounter += 0.5;
   if (heroX < 0 || heroX > 55 || heroY < 0 || heroY > 55) {
-    createP(realcounter + "s with the color " + backgroundColor + " and " + resetcounter + " resets.");
+    createP(realcounter + "s with the color " + backgroundColor.replace("rgba(255,0,0,1)", "red").replace("rgba(0,0,255,1)", "blue") /*I'm lazy*/ + " and " + resetcounter + " resets.");
     reset();
     resetcounter = 0;
     choosebgColor();
