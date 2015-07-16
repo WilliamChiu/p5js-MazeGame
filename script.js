@@ -27,7 +27,7 @@ function draw() {
   counter.html(realcounter);
   realcounter++;
   if (heroX < 0 || heroX > 55 || heroY < 0 || heroY > 55) {
-    createP(realcounter + "s with the color" + backgroundColor + " and " + resetcounter + " resets.");
+    createP(realcounter + "s with the color " + backgroundColor + " and " + resetcounter + " resets.");
     reset();
     resetcounter = 0;
     choosebgColor();
@@ -103,6 +103,6 @@ function reset() {
 }
 
 function choosebgColor() {
-  if (backgroundColor == color(255, 0, 0)) backgroundColor == color(0, 0, 255, 1);
-  else backgroundColor == color(255, 0, 0, 1);
+  if (backgroundColor == color(255, 0, 0)) backgroundColor == color(0, 0, 255);
+  else backgroundColor = color(255, 0, 0);
 }
