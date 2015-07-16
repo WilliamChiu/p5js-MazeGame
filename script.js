@@ -13,12 +13,17 @@ function setup() {
   counter.parent("gameContainer");
   heroX = 27;
   heroY = 27;
-  if (floor(random(2)) == 0) backgroundColor = color(255, 0, 0);
-  else backgroundColor = color(0, 0, 255);
+  if (floor(random(2)) == 0) {
+    backgroundColor = color(255, 0, 0);
+    frameRate(0.5);
+  }
+  else {
+    backgroundColor = color(0, 0, 255);
+    frameRate(1);
+  }
   background(backgroundColor);
   noStroke();
   noSmooth();
-  frameRate(1);
   realcounter = 0;
   fill(255);
   rect(12 * heroX, 12 * heroY, 12, 12);
