@@ -20,7 +20,7 @@ function setup() {
   noSmooth();
   frameRate(2);
   realcounter = 0;
-  fill(0);
+  fill(255);
   rect(12 * heroX, 12 * heroY, 12, 12);
   drawEnemies();
 }
@@ -94,7 +94,7 @@ function clearEnemySpace() {
   rect(12 * (heroX), 12 * (heroY - 1), 12, 12);
   rect(12 * (heroX + 1), 12 * (heroY), 12, 12);
   rect(12 * (heroX), 12 * (heroY + 1), 12, 12);
-  fill(0);
+  fill(255);
 }
 
 function reset() {
