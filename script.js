@@ -1,10 +1,10 @@
 isReset = true;
 heroX = 0, heroY = 0;
 chooseSide = -1;
-counter = document.createElement("p");
-document.body.appendChild(counter);
+counter;
 
 function setup() {
+  counter = createP();
   createCanvas(660, 660);
   heroX = 27;
   heroY = 27;
@@ -16,7 +16,7 @@ function setup() {
 }
 
 function draw() {
-  counter.innerHTML = frameCount;
+  counter = html("test");
   if (keyIsPressed && isReset) {
     println(heroX);
     if (keyCode == 37) {
