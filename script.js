@@ -56,45 +56,45 @@ function drawEnemies() {
 
 function drawLeftEnemy(x) {
   if (x == 0) {
-    rect(16 * (heroX - 1), 16 * (heroY), 16, 16);
+    rect(12 * (heroX - 1), 12 * (heroY), 12, 12);
   }
   else {
-    rect(16 * (heroX - 1), 16 * (heroY), 16, 32);
+    rect(12 * (heroX - 1), 12 * (heroY), 12, 24);
   }
 }
 
 function drawUpEnemy(x) {
   if (x == 0) {
-    rect(16 * (heroX + 1), 16 * (heroY - 1), 16, 16);
+    rect(12 * (heroX + 1), 12 * (heroY - 1), 12, 12);
   }
   else {
-    rect(16 * (heroX), 16 * (heroY - 1), 32, 16);
+    rect(12 * (heroX), 12 * (heroY - 1), 24, 12);
   }
 }
 
 function drawRightEnemy(x) {
   if (x == 0) {
-    rect(16 * (heroX + 2), 16 * (heroY + 1), 16, 16);
+    rect(12 * (heroX + 2), 12 * (heroY + 1), 12, 12);
   }
   else {
-    rect(16 * (heroX + 2), 16 * (heroY), 32, 16);
+    rect(12 * (heroX + 2), 12 * (heroY), 24, 12);
   }
 }
 
 function drawDownEnemy(x) {
   if (x == 0) {
-    rect(16 * (heroX), 16 * (heroY + 2), 16, 16);
+    rect(12 * (heroX), 12 * (heroY + 2), 12, 12);
   }
   else {
-    rect(16 * (heroX), 16 * (heroY + 2), 32, 16);
+    rect(12 * (heroX), 12 * (heroY + 2), 24, 12);
   }
 }
 
 function clearEnemySpace() {
-  rect(16 * (heroX - 1), 16 * (heroY), 16, 32);
-  rect(16 * (heroX), 16 * (heroY - 1), 32, 16);
-  rect(16 * (heroX + 2), 16 * (heroY), 16, 32);
-  rect(16 * (heroX), 16 * (heroY + 2), 32, 16);
+  rect(12 * (heroX - 1), 12 * (heroY), 12, 24);
+  rect(12 * (heroX), 12 * (heroY - 1), 24, 12);
+  rect(12 * (heroX + 2), 12 * (heroY), 12, 24);
+  rect(12 * (heroX), 12 * (heroY + 2), 24, 12);
 }
 
 function drawDistraction() {
