@@ -3,13 +3,15 @@ var heroX = 0, heroY = 0;
 var chooseSide = -1;
 var counter;
 var realcounter;
+var backgroundColor;
 
 function setup() {
   counter = createP();
   createCanvas(660, 660);
   heroX = 27;
   heroY = 27;
-  background(100);
+  choosebgColor();
+  background(backgroundColor);
   noStroke();
   noSmooth();
   frameRate(1);
@@ -22,7 +24,11 @@ function setup() {
 function draw() {
   counter.html(realcounter);
   realcounter++;
-  if (heroX < 0 || heroX > 55 || heroY < 0 || heroY > 55) createP(realcounter + "");
+  if (heroX < 0 || heroX > 55 || heroY < 0 || heroY > 55) {
+    createP(realcounter + "");
+    heroX = 27;
+    heroY = 27;
+  }
   if (keyIsPressed) {
     println(heroX);
     if (keyCode == 37) {
@@ -46,7 +52,7 @@ function draw() {
 }
 
 function nextFrame() {
-  background(100);
+  background(backgroundColor);
   rect(12 * heroX, 12 * heroY, 12, 12);
   drawEnemies();
 }
@@ -77,7 +83,7 @@ function drawDownEnemy() {
 }
 
 function clearEnemySpace() {
-  fill(100);
+  fill(backgroundColor);
   rect(12 * (heroX - 1), 12 * (heroY), 12, 12);
   rect(12 * (heroX), 12 * (heroY - 1), 12, 12);
   rect(12 * (heroX + 1), 12 * (heroY), 12, 12);
@@ -89,4 +95,10 @@ function reset() {
   heroX = 27;
   heroY = 27;
   realcounter = 0;
+}
+
+function choosebgColor() {
+  if (floor(random(2)) == 0) backgroundColor = color(255, 0, 0);
+  else backgroundColor = (0, 0, 255);
+}
 }
