@@ -37,6 +37,7 @@ function draw() {
       heroY++;
     }
     nextFrame();
+  }
 }
 
 function nextFrame() {
