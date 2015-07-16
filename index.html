@@ -13,6 +13,18 @@
     <p>You are the white dot.</br>You are being blocked by the grey dot.</br>Escape to the edges with the arrow keys.</p>
   </div>
   <div id="gameContainer" style="width:660px;margin:50px auto;text-align:center;padding:40px;background-color:rgb(220, 220, 220);font-family:arial;color:black;"></div>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.swipe-events.js"></script>
+    <script>
+      $(function(){
+        $('#swipebox')
+          .swipeEvents()
+          .bind("swipeLeft",  function(){ $('#swipebox').html("Swipe Left"); })
+          .bind("swipeRight", function(){ $('#swipebox').html("Swipe Right"); })
+          .bind("swipeDown",  function(){ $('#swipebox').html("Swipe Down"); })
+          .bind("swipeUp",    function(){ $('#swipebox').html("Swipe Up"); });
+      });
+    </script>
 </body>
  
 </html>
