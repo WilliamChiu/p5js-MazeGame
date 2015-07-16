@@ -41,7 +41,10 @@ function draw() {
     realcounter = 0;
     choosebgColor();
   }
-  if (keyIsPressed) {
+  nextFrame();
+}
+
+function keyPressed() {
     println(heroX);
     if (keyCode == 37) {
       if (chooseSide == 0) reset();
@@ -60,8 +63,6 @@ function draw() {
       else heroY++;
     }
     else if (key == "a") heroX = 0; //cheat
-  }
-  nextFrame();
 }
 
 function nextFrame() {
