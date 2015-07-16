@@ -10,6 +10,7 @@ function setup() {
   fill(0);
   noStroke();
   noSmooth();
+  rect(12 * heroX, 12 * heroY, 12, 12);
 }
 
 function draw() {
